@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="progressbar.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$('#progressbar li.active').click(function(){
+			$('#content').text($(this).text());
+		});
+		$('#content').text($('#progressbar li.active').last().text());
+	});
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Progress Bar</h1>
+      <ul id="progressbar">
+		<li class="active">Account Setup</li>
+		<li class="active">Social Profiles</li>
+		<li>Personal Details</li>
+	</ul>
+	<div id="content"></div>
+	</div>
+</body>
+</html>
+
