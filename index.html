@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Progress Bar Example</title>
+  <title>Progress Bar demo Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="progressbar.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
+		var activeState=0;
 	$(document).ready(function(){
 		$('#progressbar li.active').click(function(){
+			$(this).focus();
 			$('#content').text($(this).text());
 		});
+		//$('#progressbar li:before').css('background','red');
 		$('#content').text($('#progressbar li.active').last().text());
 	});
+	function next(){
+		activeState++;
+		$('#content').text($($('li')[activeState]).text());
+	}
+	function prev(){
+		activeState--;
+		$('#content').text($($('li')[activeState]).text());
+		//$('li:last-child').removeClass('active');
+	}
   </script>
 </head>
 <body>
@@ -23,9 +35,14 @@
       <ul id="progressbar">
 		<li class="active">Account Setup</li>
 		<li class="active">Social Profiles</li>
-		<li>Personal Details</li>
+		<li class="">Personal Details</li>
 	</ul>
 	<div id="content"></div>
+	</div>
+	
+	<div>
+		<button onclick="prev(this)">previous</button>
+		<button onclick="next(this)">next</button>
 	</div>
 </body>
 </html>
