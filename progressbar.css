@@ -56,3 +56,18 @@ li.active{
 
 
 
+.test:before{
+	content:'';
+	height:4px;
+	width:40px;
+	background-color:black;
+	position:absolute;
+}
+.test:after{
+	content:'';
+	height:4px;
+	width:50px;
+	background-color:black;
+	position:absolute;
+	top:7px;
+}
