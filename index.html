@@ -1,49 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Progress Bar demo Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="progressbar.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-		var activeState=0;
-	$(document).ready(function(){
-		$('#progressbar li.active').click(function(){
-			$(this).focus();
-			$('#content').text($(this).text());
-		});
-		//$('#progressbar li:before').css('background','red');
-		$('#content').text($('#progressbar li.active').last().text());
-	});
-	function next(){
-		activeState++;
-		$('#content').text($($('li')[activeState]).text());
-	}
-	function prev(){
-		activeState--;
-		$('#content').text($($('li')[activeState]).text());
-		//$('li:last-child').removeClass('active');
-	}
-  </script>
-</head>
-<body>
-
-<div class="container">
-  <h1>Progress Bar</h1>
-      <ul id="progressbar">
-		<li class="active">Account Setup</li>
-		<li class="active">Social Profiles</li>
-		<li class="">Personal Details</li>
-	</ul>
-	<div id="content"></div>
+<html>
+	<head>
+		<title>Yash Resume</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/resume.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+		<script src="js/route.js"></script>
+	</head>
+	<body ng-app="myApp">
+	<div class="main-container">
+		<header>
+			<img src="img/abc.jpeg" height=100 width=100 />
+			<h1>Yash Surana</h1>
+		</header>
+		<div>
+			<nav>
+				<ul>
+					<li><a href="/">Personal Details</a></li>
+					<li>Professional Details</li>
+					<li>Contact Information</li>
+				</ul>
+			</nav>
+			<div class="container" ng-view>
+			
+			</div>
+		</div>
 	</div>
-	
-	<div>
-		<button onclick="prev(this)">previous</button>
-		<button onclick="next(this)">next</button>
-	</div>
-</body>
+	</body>
 </html>
-
