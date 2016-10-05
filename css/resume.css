@@ -1,0 +1,47 @@
+
+.main-container{
+	box-shadow: 0 0 50px #888888;
+	width:70%;
+	margin:auto;
+}
+header{
+	padding:2%;
+	background-color:#009fdb;
+	display:flex;
+	width:96%;
+}
+header h1{
+	margin-left:20%;
+	color:#FFF;
+}
+header img{
+	
+}
+nav{
+	background-color:aqua;
+	box-shadow: 0 0 50px #888888;
+	width:30%;
+	
+}
+nav ul{
+	list-style-type:none;
+}
+nav ul>li{
+	font-size:1.5rem;
+	background-color:blue;
+	color:white;
+	margin-bottom:2%;
+}
+nav ul>li:hover{
+	background-color:#00FF95;
+	
+}
+header+div{
+	display:flex;
+	padding:2%;
+}
+.container{
+	box-shadow: 0 0 50px #888888;
+	width:70%;
+
+}
