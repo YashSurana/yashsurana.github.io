@@ -1,4 +1,7 @@
-
+body{
+	background:url("images/") no-repeat fixed bottom;
+	
+}
 .main-container{
 	box-shadow: 0 0 50px #888888;
 	width:70%;
@@ -13,12 +16,25 @@ header{
 header h1{
 	margin-left:20%;
 	color:#FFF;
+	margin-right:20%;
 }
-header img{
+img{
+	transition: transform 2s;
+}
+img:hover{
+	transform:rotate(360deg);
 	
 }
+header img{
+	transition:height 2s,width 2s,position 2s,transform 2s;
+}
+header img:hover{
+	position:absolute;
+	height:300px;
+	width:300px;
+	transform:rotate(360deg);
+}
 nav{
-	background-color:aqua;
 	box-shadow: 0 0 50px #888888;
 	width:30%;
 	
@@ -28,12 +44,19 @@ nav ul{
 }
 nav ul>li{
 	font-size:1.5rem;
-	background-color:blue;
+	background-color:#FBBE76;
 	color:white;
-	margin-bottom:2%;
+	padding:5%;
+	margin-bottom:6%;
+	transition:background-color 1s transform 1s;
 }
-nav ul>li:hover{
-	background-color:#00FF95;
+nav ul>li a{
+	color: #fff;
+	text-decoration: none;
+}
+nav ul>li:hover ,nav ul>li:active{
+	background-color:hsl(30, 100%, 50%);
+
 	
 }
 header+div{
@@ -45,3 +68,25 @@ header+div{
 	width:70%;
 
 }
+.personal-container img{
+	margin-right:10%;
+	margin-left:10%;
+} 
+
+/*tooltip */
+a.tooltip .tooltiptext {
+    visibility:hidden;
+    width: 150px;
+    height:auto;
+    background-color: #009fdb;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    opacity:0;
+    transition: visibility 1s,opacity 1s;
+}
+/*a.tooltip:hover .tooltiptext{
+	visibility:visible!important;
+	opacity: 1!important;    
+	color:white;
+}*/

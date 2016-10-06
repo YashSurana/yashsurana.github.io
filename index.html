@@ -7,6 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 		<script src="js/route.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body ng-app="myApp">
 	<div class="main-container">
@@ -17,15 +18,25 @@
 		<div>
 			<nav>
 				<ul>
-					<li><a href="/">Personal Details</a></li>
-					<li>Professional Details</li>
-					<li>Contact Information</li>
+					<li>
+						<a class="tooltip" href="#personal">Personal Details
+						<div class="tooltiptext">Click to see my Personal Details</div>
+						</a></li>
+					<li>
+						<a class="tooltip" >Professional Details
+						<div class="tooltiptext">Click to see my detailed professional summary
+						</div></a>
+					</li>
+					<li>
+						<a class="tooltip" >Contact Information
+							<div class="tooltiptext">Click to see Contact info
+							</div></a>
+					</li>
 				</ul>
 			</nav>
 			<div class="container" ng-view>
 			
 			</div>
 		</div>
-	</div>
 	</body>
 </html>
