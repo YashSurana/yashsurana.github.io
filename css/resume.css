@@ -19,6 +19,8 @@ header h1{
 	margin-right:20%;
 }
 img{
+	height:40%;
+	width:40%;
 	transition: transform 2s;
 }
 img:hover{
@@ -27,6 +29,8 @@ img:hover{
 }
 header img{
 	transition:height 2s,width 2s,position 2s,transform 2s;
+	height:auto;
+	width:auto;
 }
 header img:hover{
 	position:absolute;
@@ -54,7 +58,11 @@ nav ul>li a{
 	color: #fff;
 	text-decoration: none;
 }
-nav ul>li:hover ,nav ul>li:active{
+.active{
+	background-color:hsl(30, 100%, 50%);
+	
+}
+nav ul>li:hover {
 	background-color:hsl(30, 100%, 50%);
 
 	
@@ -67,6 +75,9 @@ header+div{
 	box-shadow: 0 0 50px #888888;
 	width:70%;
 
+}
+.personal-container{
+	padding:10%;
 }
 .personal-container img{
 	margin-right:10%;

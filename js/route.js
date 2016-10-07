@@ -6,5 +6,8 @@ app.config(function($routeProvider){
 		})
 	.when("/personal",{
 		templateUrl : "partials/personal.htm"
+		})
+	.when("/professional",{
+		templateUrl : "partials/professional.htm"
 	});
 });

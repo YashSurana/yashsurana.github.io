@@ -7,23 +7,23 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 		<script src="js/route.js"></script>
-		<script src="js/main.js"></script>
+		
+		
 	</head>
 	<body ng-app="myApp">
 	<div class="main-container">
 		<header>
 			<img src="img/abc.jpeg" height=100 width=100 />
-			<h1>Yash Surana</h1>
+			<h1 id="yash">Yash Surana</h1>
 		</header>
 		<div>
 			<nav>
-				<ul>
+				<ul class="navigation">
 					<li>
-						<a class="tooltip" href="#personal">Personal Details
-						<div class="tooltiptext">Click to see my Personal Details</div>
+						<a id="personal" class="tooltip" href="#personal">Personal Details
 						</a></li>
 					<li>
-						<a class="tooltip" >Professional Details
+						<a class="tooltip" href="#professional">Professional Details
 						<div class="tooltiptext">Click to see my detailed professional summary
 						</div></a>
 					</li>
@@ -38,5 +38,12 @@
 			
 			</div>
 		</div>
+		
+		<script>
+		document.querySelectorAll('li a')[0].addEventListener('click',function(){
+			document.querySelectorAll('li')[0].className="active";
+		});
+		</script>
 	</body>
+	
 </html>
