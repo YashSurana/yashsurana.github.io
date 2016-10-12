@@ -14,6 +14,15 @@ header h1{
 	color:#FFF;
 	margin-right:20%;
 }
+nav div{
+	width:20%;
+	border:1px solid;
+	display:inline-block;
+}
+.container{
+	height:400px;
+	width:100%;
+}
 img{
 	height:40%;
 	width:40%;
@@ -36,8 +45,9 @@ header img:hover{
 }
 nav{
 	box-shadow: 0 0 50px #888888;
-	width:30%;
-	
+	width:90%;
+	margin:auto;
+	text-align:center;
 }
 n
 .active{
