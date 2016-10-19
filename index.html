@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Yash Resume</title>
+		<title>SPA Form</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/resume.css">
+		<link rel="stylesheet" href="css/app.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 		<script src="js/route.js"></script>
+		<script src="js/main.js"></script>
+		
+		
 	</head>
-	<body ng-app="myApp">
-	<div class="main-container">
-		<header>
-			<img src="img/abc.jpeg" height=100 width=100 />
-			<h1>Yash Surana</h1>
-		</header>
-		<div>
-			<nav>
-				<ul>
-					<li><a href="/">Personal Details</a></li>
-					<li>Professional Details</li>
-					<li>Contact Information</li>
-				</ul>
-			</nav>
-			<div class="container" ng-view>
+	<body ng-app="myForm">
+		<a >Enter data</a>
+		<a href="#view">View</a>
+		<a href="#update">Update</a>
+		<a href="#delete">Delete</a>
+		<div ng-view>	
 			
-			</div>
 		</div>
-	</div>
 	</body>
+	
 </html>
